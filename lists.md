@@ -88,13 +88,38 @@ l.pop(3) # [10,20,40,60,60,50]
 
 #### ```del```
 + General purpose keyword can be used in others as well
-+ ```del``` 
 ```python
 l = [10,20,50]
 del l[1] # [10,50] (removes the value at the provided index)
 del l[0:2] # [50]
 ```
+#### ```max(list)```
++ Returns max value present in list
+```python
+l = [10,20,50]
+print(max(l)) # output 50
+```
 
+#### ```min(list)```
++ Returns min value present in list
+```python
+l = [10,20,50]
+print(min(l)) # output 10
+```
+
+#### ```sum(list)```
++ Returns sum of values present in list [int]
++ If we typecast each str of int value to int, it adds.
++ Throws error if different types of values present
+```python
+l = [10,20,50]
+print(sum(l)) # output 80
+l2=[10,'apple'] # throws error
+l3 = [int('10'),int('30')] #output 40
+l4 = ['int(apple)', int('banana')] #invalid literal
+```
+
+---------------
 # Important Points
  + The upper bound is always exclusive
     * ```[0:2]``` will range from 0,1 not 2
