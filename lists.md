@@ -7,6 +7,7 @@
 + Has reverse indexing example, list[-1],list[-2]
 + Mutable
 
+
 ----------------
 ## Initializing a list
 ```python 
@@ -18,7 +19,7 @@ l = list() #second way
 ```python
 l = [10,20,30,40,50]
 l2=['apple','banana','grapes']
-print(l) # output [10,20,30,40,50]
+print(l) # output [10,20,30,40,50] # using array type indexing
 print(l[3]) # output 40
 print(l[-1]) # output 50 'reverse indexing'
 print(l2[-3]) # output apple
@@ -28,6 +29,7 @@ print(l2[-3]) # output apple
 
 ### ```list.append(value)```
 + Appends the passed value at the end
++ It takes O(1) time to append in the end
 ```python
 list_e = [10,20,30,40,50]
 l.append(30) # will append 30 at last
@@ -90,6 +92,7 @@ l.remove(10) #output -> [20,30,40,60,60,50]
 ### ```list.pop() , list.pop(index)```
 + Removes the last element of the list
 + ```pop()``` function returns the value popped from the list
++ Time Complexity O(1)
 ```python
 l = [10,20,30,40,60,60,50]
 l.pop() #output -> [20,30,40,60,60]
@@ -108,6 +111,8 @@ del l[0:2] # [50]
 ```python
 l = [10,20,50]
 print(max(l)) # output 50
+l2=['banana','apple','cherry']
+print(max(l2)) # gives lexographically highest string
 ```
 
 ### ```min(list)```
@@ -116,6 +121,8 @@ print(max(l)) # output 50
 ```python
 l = [10,20,50]
 print(min(l)) # output 10
+l2=['banana','apple','cherry']
+print(min(l2)) # gives lexographically smallest string
 ```
 
 ### ```sum(list)```
@@ -130,8 +137,36 @@ l3 = [int('10'),int('30')] #output 40
 l4 = ['int(apple)', int('banana')] #invalid literal
 ```
 
+### ```list.reverse()```
++ Reverses the list 
+```python
+l1=[10,20,30]
+l1.reverse() # [30,20,10]
+```
+
+### ```list.sort()```
++ Sorts the list in increasing order 
++ sort function only works
+```python
+l1=[60,10,30]
+l1.sort() # [10,30,60]
+l2=['banana','apple','cherry']
+l2.sort() # ['apple','banana','cherry'] # will sort lexographically
+```
+
 ---------------
 # Important Points
- + The upper bound is always exclusive
-    * ```[0:2]``` will range from 0,1 not 2
-    * ```range(1,10)``` will return values 1 to 9, not 10.
++ **The upper bound is always exclusive**
+	1. ```[0:2]``` will range from 0,1 not 2
+	2. ```range(1,10)``` will return values 1 to 9, not 10.
++ `max()` , `min()` , `sum()` , `sort()` only work in same data types.
++ `reverse()` will work in different data types as it only reverses the values, does not check them.
+
+## Advantages:
++ Random Access.
++ Cache Friendlinesss
+
+## Diadvantages:
++ Insertion, deletions, search(**not sorted**) are slow O(n). 
+
+
