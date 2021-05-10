@@ -152,7 +152,48 @@ l1=[60,10,30]
 l1.sort() # [10,30,60]
 l2=['banana','apple','cherry']
 l2.sort() # ['apple','banana','cherry'] # will sort lexographically
+l1.sort(reverse=True) # [60,30,10] descending order
 ```
+
+### ```list2=list1.copy()```
++ Combines two lists into one
+```python
+ 	numbers1=[10,20,30,40,50]
+	numer2= numbers1.copy()
+	print(numbers2) # [10, 20, 30, 40, 50]
+```
+
+### ```list.extend(list2)```
++ Combines two lists into one
+```python
+ 	numbers1=[10,20,30,40,50]
+	numbers2=[60,70,80,90]
+	numbers1.extend(numbers2)
+	print(numbers1) # [10, 20, 30, 40, 50, 60, 70, 80, 90]
+```
+
+### ```list[<start>:<stop>:<step_count>(optional)]```
+
++ Gets a portion of a collection
++ Called as slicing
+
+```python
+	numbers=[10,20,30,40,50,60,70,80,90,100]
+	print(numbers[2:7]) # [30,40,50,60,70]
+	print(numbers[0:10+1:2]) # [10, 30, 50, 70, 90] #even positions
+	print(numbers[1::2]) #[20, 40, 60, 80, 100] #odd positions
+	print(numbers[::-1]) # prints the list in reverse
+```
+
+### ```list.clear()```
++ Clears the list
+```python
+ 	numbers1=[10,20,30,40,50]
+	numbers1.clear()
+	print(numbers1) # []
+```
+
+
 
 ---------------
 # Important Points
