@@ -3,3 +3,8 @@
 
 ## [Tuples](https://github.com/kameshkotwani/python3-notes/blob/main/tuples.md)
 
+## [Sets](https://github.com/kameshkotwani/python3-notes/blob/main/sets.md)
+
+## [Dictionaries](https://github.com/kameshkotwani/python3-notes/blob/main/dictionaries.md)
+
+
