@@ -84,6 +84,7 @@ l.index(60,4,7) #output -> 5
 ### ```list.remove(element)```
 + Removes the passed element
 + Value error is raised if element not present
++ Returns `None` 
 ```python
 l = [10,20,30,40,60,60,50]
 l.remove(10) #output -> [20,30,40,60,60,50]
